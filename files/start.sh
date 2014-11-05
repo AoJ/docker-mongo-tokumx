@@ -16,7 +16,7 @@ if [ ! -f /.mongo_admin_created ]; then
 
 	echo "=> starting mongo"
 	/usr/bin/mongod --config /etc/tokumx.conf --noauth --noprealloc --nohttpinterface &
-	sleep 1
+	sleep 3
 
 	COLLECTD_PASS=$(pwgen -s 16 1)
 	ADMIN_PASS=$(pwgen -s 16 1)
